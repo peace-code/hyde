@@ -1,118 +1,40 @@
-# Hyde
+# peacecode [![Build Status](https://travis-ci.org/peace-code/peace-code.github.io.svg?branch=develop)](https://travis-ci.org/peace-code/peace-code.github.io)
 
-Hyde is a brazen two-column [Jekyll](http://jekyllrb.com) theme that pairs a prominent sidebar with uncomplicated content. It's based on [Poole](http://getpoole.com), the Jekyll butler.
+피스코드는 세계 평화를 위해 코드를 쓰고 서비스를 만듭니다!    
 
-![Hyde screenshot](https://f.cloud.github.com/assets/98681/1831228/42af6c6a-7384-11e3-98fb-e0b923ee0468.png)
+![peacecode](https://avatars2.githubusercontent.com/u/2830742?v=3&amp;s=320)
 
+## 블로그 포스트 작성
 
-## Contents
+_posts 디렉토리에 2015-01-18-introducing-peacecode.md 이런 형식으로 파일을 만들고 마크다운 문법에 따라 글을 작성하고 저장 후 커밋 푸시하면 바로 반영됩니다. 드래프트 기능을 사용할 수도 있습니다. 
 
-- [Usage](#usage)
-- [Options](#options)
-  - [Sidebar menu](#sidebar-menu)
-  - [Sticky sidebar content](#sticky-sidebar-content)
-  - [Themes](#themes)
-  - [Reverse layout](#reverse-layout)
-- [Development](#development)
-- [Author](#author)
-- [License](#license)
+일반 페이지는 걍 루트나 디렉토리 만들어서 파일 만드는 방식으로 블로그 포스트와 동일합니다. 다만 front matter에 레이아웃에 page라고 지정한 페이지만 메뉴에 나옵니다. includes/sidebar.html 파일 소스를 보시면 됩니다.
 
 
-## Usage
+## 블로그 코드에 대하여
 
-Hyde is a theme built on top of [Poole](https://github.com/poole/poole), which provides a fully furnished Jekyll setup—just download and start the Jekyll server. See [the Poole usage guidelines](https://github.com/poole/poole#usage) for how to install and use Jekyll.
+[Mark Otto](https://github.com/mdo)가 작성한 [hyde](https://github.com/poole/hyde), [Jekyll](http://jekyllrb.com) 테마를 포크해서 살짝 수정해서 사용합니다.   
+[MIT 라이선스](https://github.com/poole/hyde/blob/master/LICENSE.md)
+ 
+
+## 블로그 콘텐츠에 대하여
+
+달리 정하지 않은 이 블로그의 모든 내용은 [크리에이티브 커먼즈 저작자 표시 4.0 국제 라이선스](https://creativecommons.org/licenses/by/4.0/deed.ko)에 따라 이용할 수 있습니다. 자세한 이용기능 내용과 허락 조건을 확인하려면 앞에 링크를 참고하세요.
 
 
-## Options
-
-Hyde includes some customizable options, typically applied via classes on the `<body>` element.
-
-
-### Sidebar menu
-
-Create a list of nav links in the sidebar by assigning each Jekyll page the correct layout in the page's [front-matter](http://jekyllrb.com/docs/frontmatter/).
-
+## 요구사항
 ```
----
-layout: page
-title: About
----
+ruby 2.1.1
+gem install github-pages
 ```
 
-**Why require a specific layout?** Jekyll will return *all* pages, including the `atom.xml`, and with an alphabetical sort order. To ensure the first link is *Home*, we exclude the `index.html` page from this list by specifying the `page` layout.
+## 로컬 개발
 
-
-### Sticky sidebar content
-
-By default Hyde ships with a sidebar that affixes it's content to the bottom of the sidebar. You can optionally disable this by removing the `.sidebar-sticky` class from the sidebar's `.container`. Sidebar content will then normally flow from top to bottom.
-
-```html
-<!-- Default sidebar -->
-<div class="sidebar">
-  <div class="container sidebar-sticky">
-    ...
-  </div>
-</div>
-
-<!-- Modified sidebar -->
-<div class="sidebar">
-  <div class="container">
-    ...
-  </div>
-</div>
 ```
+git clone peace-code/peace-code.github.io
+cd peace-code.github.io
+jekyll serve # 걍 띄우기
 
-
-### Themes
-
-Hyde ships with eight optional themes based on the [base16 color scheme](https://github.com/chriskempson/base16). Apply a theme to change the color scheme (mostly applies to sidebar and links).
-
-![Hyde in red](https://f.cloud.github.com/assets/98681/1831229/42b0b354-7384-11e3-8462-31b8df193fe5.png)
-
-There are eight themes available at this time.
-
-![Hyde theme classes](https://f.cloud.github.com/assets/98681/1817044/e5b0ec06-6f68-11e3-83d7-acd1942797a1.png)
-
-To use a theme, add anyone of the available theme classes to the `<body>` element in the `default.html` layout, like so:
-
-```html
-<body class="theme-base-08">
-  ...
-</body>
+# open http://localhost:4000
 ```
-
-To create your own theme, look to the Themes section of [included CSS file](https://github.com/poole/hyde/blob/master/public/css/hyde.css). Copy any existing theme (they're only a few lines of CSS), rename it, and change the provided colors.
-
-### Reverse layout
-
-![Hyde with reverse layout](https://f.cloud.github.com/assets/98681/1831230/42b0d3ac-7384-11e3-8d54-2065afd03f9e.png)
-
-Hyde's page orientation can be reversed with a single class.
-
-```html
-<body class="layout-reverse">
-  ...
-</body>
-```
-
-
-## Development
-
-Hyde has two branches, but only one is used for active development.
-
-- `master` for development.  **All pull requests should be to submitted against `master`.**
-- `gh-pages` for our hosted site, which includes our analytics tracking code. **Please avoid using this branch.**
-
-
-## Author
-
-**Mark Otto**
-- <https://github.com/mdo>
-- <https://twitter.com/mdo>
-
-
-## License
-
-Open sourced under the [MIT license](LICENSE.md).
-
-<3
+[테마 사용법](https://github.com/poole/hyde/blob/master/README.md)을 참고하시면 됩니다.
