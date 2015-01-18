@@ -1,0 +1,21 @@
+
+#profile-img {
+	display: none;
+}
+
+@media (min-width: 48em) {
+  #profile-img {
+  	display: block;
+    width: 70%;
+	border-radius: 50%;
+  }
+}
+
+#license {
+	font-size: 0.8rem;
+}
+
+.post {
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 6em;
+}
