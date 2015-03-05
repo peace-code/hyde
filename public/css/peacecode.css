@@ -19,3 +19,8 @@
 	border-bottom: 1px solid #ccc;
 	margin-bottom: 6em;
 }
+
+.sidebar-about h2 {
+	font-size: 800%;
+	color: #fff;
+}
