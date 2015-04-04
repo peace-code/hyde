@@ -16,3 +16,13 @@ title: 소개
   </li>
   {% endfor %}
 </ul>
+
+<p class="message">
+  <address>
+	<strong>이메일</strong><br>
+	<em>contact@peacecode.org</em>
+  </address>
+
+  {% include contact_static.html %}
+  
+</p>
