@@ -18,6 +18,9 @@ $(function() {
 
     $('#contactForm').on('submit', function(e){
         e.preventDefault();
+        if ($("#contactForm input, #contactForm textarea").jqBootstrapValidation("hasErrors")) {
+          return;
+        }
         $.ajax({
             url: "//formspree.io/contact@peacecode.org",
             method: "POST",
@@ -35,7 +38,7 @@ $(function() {
         })
         .fail(function() {
             $('#failed').addClass('alert alert-danger').html('음... 문제가 있네요. 죄송합니다.');
-        })
+        });
     });
 });
 
