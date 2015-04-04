@@ -8,3 +8,11 @@ title: 소개
   가장 중요한 원칙은 서로의 의견을 경청하고 존중하면서 키보드와 마우스를 잡고 만들어내는 겁니다!
 </p>
 
+<ul>
+  {% for repo in site.github.public_repositories %}
+  <li>
+    <h2><a target="_blank" href="{{ repo.html_url }}">{{ repo.name }}</a></h2>
+    <p>{{ repo.description}}</p>
+  </li>
+  {% endfor %}
+</ul>
